@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" ng-app>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>TechTalk - Let's talk about angular</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h3>Let's talk about angular <span class="fragment"><strike>2.x</strike></span>
+					<span class="fragment"><underline>1.4.x</underline></span></h3>
+					<img data-src="angular.png">
+				</section>
+
+				<section>
+					<h3>Let's talk about angular <strike>2.0</strike> 1.4</h3>
+					<img data-src="angular.png">
+				</section>
+
+
+
+				<section>
+					<h3>Numbers don't lie</h3>
+					<img data-src="trends.png">
+					<p class="fragment" style="color:red;">backbonejs</p>
+					<p class="fragment" style="color:#3333CC;">angularjs</p>
+					<p class="fragment" style="color:orange;">Angela Merkel</p>
+				</section>
+
+
+
+				<section>
+						<h2 ng-bind="title">Pretty Code </h2>
+
+						<input ng-model="title" value="Pretty Code">
+
+						<pre><code data-trim contenteditable>
+
+
+
+	function linkify( selector ) {
+		if( supports3DTransforms ) {
+
+			var nodes = document.querySelectorAll( selector );
+
+			for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+				var node = nodes[i];
+
+				if( !node.className ) {
+					node.className += ' roll';
+				}
+			}
+		}
+	}
+						</code></pre>
+				</section>
+
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="lib/js/angular-1.4.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
