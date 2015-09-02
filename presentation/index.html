@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en">
 
 	<head>
 		<meta charset="utf-8">
@@ -45,16 +45,16 @@
 								<li> Chris Kowal Q Promise</li>
 								<li>Dependency Injection</li>
 								<li>$digest, $watch</li>
-								<li>{ { } }, ng-bind</li>
+								<li>{{ }}, ng-bind</li>
 							</ul>
 
 						</td>
 
 						<td>
 							<ul class="fragment">
-								<li >classes (syntactic sugar)</li>
+								<li>Classes (syntactic sugar)</li>
 								<li>Promise Api</li>
-								<li>modules</li>
+								<li>Modules</li>
 								<li>Object.observe()</li>
 								<li>${templateString}</li>
 							</ul>
@@ -75,16 +75,29 @@
 
 
 
-				<section ng-style="{'background': color};">
+				<section  ng-app ng-style="{'background': color};">
 						<h2>Look Ma what I can do</h2>
 
-						<input ng-model="color"> <span>{{ color }}</span> <br>
+						<input ng-model="color"> <span>{{color}}</span> <br>
 
 						</pre>
+
+						<img src="code.png">
 				</section>
 
+				<section>
+						<small>Let's do something useful: <b>kicker leader board</b></small>
+						<img src="kicker.png">
+				</section>
 
+				<section>
+						<small>Let's do something <strike>useful</strike> hipster: <b>kicker leader board</b></small>
+						<img src="kicker2.png">
+				</section>
 
+				<section>
+						<h3>demo time</h3>
+				</section>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
