@@ -1,29 +1,24 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name demoApp
- * @description
- * # demoApp
- *
- * Main module of the application.
- */
+// The namespace of this angular app
+var APP_NAME = 'demoApp';
+
+// Angular modules to be loaded
+var modules = ['ngResource', 'ngRoute'];
+
+// configuration of routes and app specifics
+function config($routeProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/main.html',
+      controller: 'MainController',
+      controllerAs: 'vm'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+}
+
 angular
-  .module('demoApp', [
-    'ngResource',
-    'ngRoute'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+  .module(APP_NAME, modules)
+  .config(config);
