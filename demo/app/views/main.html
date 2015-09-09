@@ -1,95 +1,19 @@
-<div class="jumbotron">
-
-  <!-- the input form for scores -->
-  <p class="lead">
-    Add your latest game to the leaderboard
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h3>Team A </h3>
-      <input type="email">
-      <input type="email">
-    </div>
-    <div class="col-md-4">
-      <h3>VS</h3>
-      <form class="form-inline">
-      <input type="text" size="2" maxlength="2"> : <input type="text" size="2" maxlength="2">
-    </form>
-    </div>
-    <div class="col-md-4">
-      <h3>Team B </h3>
-      <input type="email">
-      <input type="email">
-    </div>
-  </div>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Add Score</span></a></p>
-</div>
+<div dm-score-form></div>
 
 <!-- statistics -->
-<div class="row marketing">
-  <p clas="lead"><span>1.223</span> games have been played by <span>12</span> players scoring <span>123</span> goals.</p>
+<div dm-statistics></div>
 
+<div class="row">
+
+  <!-- Detailed statistics -->
   <div class="col-md-6">
     <p class="lead"><h3>Best players <small>And upcoming stars</small></h3></p>
-
-    <table class="table">
-      <tr>
-        <th>Name</th>
-        <th>Wins</th>
-        <th>Goals</th>
-        <th>Games played</th>
-      </tr>
-      <tr>
-        <td>ABC</td>
-        <td>122</td>
-        <td>22</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td>sC</td>
-        <td>121</td>
-        <td>23</td>
-        <td>122</td>
-      </tr>
-    </table>
+    <div dm-statistics-details></div>
   </div>
 
+  <!-- Detailed statistics -->
   <div class="col-md-6">
     <h3>Busiest days of the week</h3>
-    <table class="table">
-      <tr>
-        <th>Day</th>
-        <th>Count</th>
-      </tr>
-      <tr>
-        <td>Monday</td>
-        <td>122</td>
-      </tr>
-      <tr>
-        <td>Tuesday</td>
-        <td>121</td>
-      </tr>
-      <tr>
-        <td>Wednesday</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td>Thursday</td>
-        <td>12</td>
-      </tr>
-      <tr>
-        <td>Friday</td>
-        <td>11</td>
-      </tr>
-      <tr>
-        <td>Saturday</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>Sunday</td>
-        <td>0</td>
-      </tr>
-    </table>
+    <div dm-statistics-details-2></div>
   </div>
 </div>
