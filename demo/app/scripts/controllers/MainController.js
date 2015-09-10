@@ -1,8 +1,13 @@
 'use strict';
 
-function MainController() {
+function MainController(ScoreService) {
   var vm = this;
-  vm.stats = [1,2,3,4,5,6];
+  vm.stats = {};
+
+  // initially load the data and make it available to view
+  ScoreService.get().then(function(stats) {
+    vm.stats = stats;
+  });
 }
 
 angular.module('demoApp').controller('MainController', MainController);

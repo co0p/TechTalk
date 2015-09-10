@@ -1,7 +1,22 @@
 angular.module('demoApp').directive('dmStatistics', dmStatistics);
 
-function dmStatistics(){
+function dmStatistics(ScoreService) {
+  'use strict';
+
   return {
-    template: '<p class="lead"><span>1.223</span> games have been played by <span>12</span> players scoring <span>123</span> goals.</p>'
+    scope: {
+      stats: '='
+    },
+    templateUrl: 'views/dmStatistics.html',
+
+    link: function(scope, element, attrs) {
+      scope.updateStats = updateStats;
+
+      function updateStats() {
+        ScoreService.get().then(function(data) {
+          scope.stats = data;
+        });
+      }
+    }
   };
 }

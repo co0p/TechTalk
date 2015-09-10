@@ -3,6 +3,9 @@
 // The namespace of this angular app
 var APP_NAME = 'demoApp';
 
+// backend url
+var URL = 'http://localhost:3000/scores';
+
 // Angular modules to be loaded
 var modules = ['ngResource', 'ngRoute'];
 
@@ -21,4 +24,6 @@ function config($routeProvider) {
 
 angular
   .module(APP_NAME, modules)
+  .value('_', window._)
+  .constant('URL', URL)
   .config(config);

@@ -24,16 +24,10 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-signal"></span> Smava's Kicker Leaderboard  </a>
         </div>
-
-        <!-- status -->
-        <p class="navbar-text navbar-right">
-          <span class="glyphicon glyphicon-refresh"></span> <em>Latest update:</em> <span>12:20</span>
-        </p>
-
       </div>
     </nav>
 
-    <!-- main view -->
+    <!-- main view, angular will render stuff in here -->
     <div class="container">
     <div ng-view=""></div>
     </div>
@@ -53,17 +47,25 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/lodash.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <!-- main configuration of app-->
     <script src="scripts/app.js"></script>
+
+    <!-- Services contain common ... services -->
+    <script src="scripts/services/ScoreService.js"></script>
+
+    <!-- every route has a controller -->
     <script src="scripts/controllers/MainController.js"></script>
 
+    <!-- most views use directives, similar to widgets -->
     <script src="scripts/directives/dmScoreForm.js"></script>
     <script src="scripts/directives/dmStatistics.js"></script>
-    <script src="scripts/directives/dmStatisticsDetails.js"></script>
-    <script src="scripts/directives/dmStatisticsDetails2.js"></script>
+    <script src="scripts/directives/dmPlayerList.js"></script>
     <!-- endbuild -->
 </body>
 </html>

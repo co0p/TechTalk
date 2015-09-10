@@ -1,0 +1,15 @@
+<div class="row">
+
+  <!-- some general statistics -->
+  <div class="col-md-8">
+    <span>1.223</span> games have been played by <span ng-bind="stats.playerCount"></span>
+    players scoring <span>{{stats.playerCount / stats.goalCount}}</span> goals on average.
+  </div>
+
+  <!-- the update button -->
+  <div class="col-md-4">
+    <div class="btn btn-primary"  ng-click="updateStats()">
+      <span class="glyphicon glyphicon-refresh"></span> <span>{{stats.date | date:'medium'}}</span>
+    </div>
+  </div>
+</div>

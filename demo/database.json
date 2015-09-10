@@ -1,0 +1,40 @@
+{
+  "scores": [
+    {
+      "id": 1,
+      "name": "peter",
+      "date": "11/12/2014",
+      "goals": 0
+    },
+    {
+      "id": 2,
+      "name": "pete1r",
+      "date": "11/12/2014",
+      "goals": 1
+    },
+    {
+      "id": 3,
+      "name": "pet2er",
+      "date": "12/12/2014",
+      "goals": 4
+    },
+    {
+      "id": 4,
+      "name": "pe4ter",
+      "date": "12/12/2014",
+      "goals": 3
+    },
+    {
+      "id": 5,
+      "name": "pete1r",
+      "date": "13/12/2014",
+      "goals": 2
+    },
+    {
+      "id": 6,
+      "name": "pet2er",
+      "date": "14/12/2014",
+      "goals": 1
+    }
+  ]
+}
