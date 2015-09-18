@@ -1,19 +1,7 @@
-angular.module('demoApp').directive('dmStatisticsDetails', dmStatisticsDetails);
+angular.module('demoApp').directive('dmPlayerList', dmPlayerList);
 
-function dmStatisticsDetails() {
+function dmPlayerList() {
   return {
-    scope: {
-      stats: '='
-    },
     templateUrl: 'views/dmPlayerList.html',
-    link: function(scope, element, attrs) {
-
-      scope.players = [];
-
-      // react to changes of the object
-      scope.$watch(scope.stats, function() {
-
-      });
-    }
   };
 }

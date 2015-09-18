@@ -1,7 +1,11 @@
-<div dm-score-form></div>
+<div class="alert alert-danger" ng-if="vm.showError">A network error occured. Please make sure that the backend is working</div>
 
-<!-- statistics -->
-<div dm-statistics stats='vm.stats'></div>
+<div ng-if="!vm.showError">
+  <div dm-score-form></div>
 
-<!-- Detailed statistics -->
-<div dm-statistics-details stats='vm.stats'></div>
+  <!-- statistics -->
+  <div dm-statistics stats='vm.stats'></div>
+
+  <!-- Detailed statistics -->
+  <div dm-player-list></div>
+</div>

@@ -8,11 +8,11 @@
       <th>Goals</th>
       <th>Games played</th>
     </tr>
-    <tr ng-repeat="item in stats.items">
-      <td ng-bind="item.name"></td>
-      <td>122</td>
-      <td>22</td>
-      <td>12</td>
+    <tr ng-repeat="item in vm.stats.items">
+      <td ng-bind="::item.name"></td>
+      <td ng-bind="::item.wins"></td>
+      <td ng-bind="::item.goals"></td>
+      <td ng-bind="::item.games"></td>
     </tr>
   </table>
 </div>

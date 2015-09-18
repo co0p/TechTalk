@@ -2,10 +2,10 @@
 
   <!-- some general statistics -->
   <div class="col-md-8">
-    <span>{{stats.gameCount}}</span> games have been played
-    by <span ng-bind="stats.playerCount"></span>
-    players scoring <span>{{stats.playerCount / stats.goalCount}}</span>
-    goals on average.
+    <p class="lead">
+    {{stats.gameCount}} games have been played by {{stats.playerCount}}
+    players scoring {{stats.goals}} goals.
+  </p>
   </div>
 
   <!-- the update button -->

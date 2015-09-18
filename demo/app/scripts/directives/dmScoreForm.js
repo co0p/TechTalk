@@ -1,34 +1,41 @@
-angular.module('demoApp').directive('dmScoreForm', dmScoreForm);
+'use strict';
 
-function dmScoreForm(_, ScoreService) {
+function dmScoreForm($rootScope, _, ScoreService) {
+
   return {
     templateUrl: 'views/dmScoreForm.html',
-    link: function(scope, element, attrs) {
+    link: function(scope) {
+
+      init();
 
       // create data structure in template
-      scope.score = {
-        players: {},
-        goals: {}
-      };
+      function init() {
+        scope.isValid = false;
+        scope.players = {};
+        scope.goals = {};
+      }
 
-      // forward functionality to template
-      scope.isValidToSubmit = isValidToSubmit;
-      scope.submit = submit;
+      // react on changes, set valid to true necessary fields are present, otherwise false
+      scope.$watch('[players, goals]', function(newVal) {
+        var players = newVal[0];
+        var goals = newVal[1];
+        scope.isValid = (players.a1 || players.a2) &&
+                        (players.b1 || players.b2) &&
+                        _.isNumber(goals.a) && _.isNumber(goals.b);
+      }, true);
 
-      // return true if all necessary fields are present, otherwise false
-      function isValidToSubmit(score) {
-        return !(_.isEmpty(score.players.a1) || _.isEmpty(score.players.b1)) &&
-        _.isNumber(score.goals.a) && _.isNumber(score.goals.b);
-
+      // informs the world about new data
+      function informWorld() {
+        $rootScope.$broadcast('newData', true);
       }
 
       // submit score, on success reset the form
-      function submit(score) {
-        ScoreService.add(score).then(function() {
-          scope.score.players = {};
-          scope.score.goals = {};
-        });
-      }
+      scope.submit = function submit(players, goals) {
+        var score = ScoreService.generateScore(players, goals);
+        ScoreService.add(score).then(informWorld).then(init);
+      };
     }
   };
 }
+
+angular.module('demoApp').directive('dmScoreForm', dmScoreForm);
