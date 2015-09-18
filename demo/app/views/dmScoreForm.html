@@ -8,20 +8,21 @@
   <div class="row">
     <div class="col-md-4">
       <h3>Team A </h3>
-      <input type="email">
-      <input type="email">
+      <input type="email" ng-model="score.players.a1">
+      <input type="email" ng-model="score.players.a2">
     </div>
     <div class="col-md-4">
       <h3>VS</h3>
       <form class="form-inline">
-        <input type="text" size="2" maxlength="2"> : <input type="text" size="2" maxlength="2">
+        <input type="text" size="2" maxlength="2" ng-model="score.goals.a"> :
+        <input type="text" size="2" maxlength="2" ng-model="score.goals.b">
       </form>
     </div>
     <div class="col-md-4">
       <h3>Team B </h3>
-      <input type="email">
-      <input type="email">
+      <input type="email" ng-model="score.players.b1">
+      <input type="email" ng-model="score.players.b2">
     </div>
   </div>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Add Score</span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-disabled="!isValidToSubmit(score)" ng-click="isValidToSubmit(score) && submit(score)">Add Score</span></a></p>
 </div>
