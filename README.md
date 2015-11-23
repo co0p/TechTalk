@@ -6,6 +6,13 @@ presentation
 
 open the presentation/index.html and enjoy the ride.
 
+
+DemoApp Screenshot
+------------------
+
+![](https://github.com/co0p/techTalk/blob/master/presentation/demo.png)
+
+
 demoApp
 -------
 The demo app contains most things someone would encounter in the wild
@@ -30,7 +37,3 @@ to run the backend stub server run:
 ```json-server database.json```
 
 
-DemoApp Screenshot
-------------------
-
-![](https://github.com/co0p/techTalk/blob/master/presentation/demo.png)
